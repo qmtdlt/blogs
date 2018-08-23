@@ -28,6 +28,13 @@ rowNum:-1,//不分页，显示全部
             mtype: 'POST',
         }).trigger('reloadGrid');
 ```
+
+### 获取数据
+```js
+var id=$('#gridTable').jqGrid('getGridParam','selrow');//获取行id
+var ids=$('#gridTable').jqGrid('getGridParam','selarrrow');//获取所有选中行id
+var rowData = $("#gridTable").jqGrid('getRowData',rowId);//根据id获取行数据
+```
 ### 处理查询条件累积问题
 ```js
 //清空表格  数据

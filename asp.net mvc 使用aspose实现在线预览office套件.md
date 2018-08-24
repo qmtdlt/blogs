@@ -10,3 +10,5 @@
 8. 关于弹出页面不能显示html问题：端口号未与网站默认端口保持一致，修改端口号后正常，能够预览文件
 9. 考虑怎样不使用BundleConfig.cs方式，导致前端不灵活
 10. 运行程序查看index.cshtml文件，找到程序引用的css，js文件手动引用文件，去掉BundleConfig.cs后依然正常执行
+
+https://github.com/qmtdlt/blogs/blob/master/copydemo.7z

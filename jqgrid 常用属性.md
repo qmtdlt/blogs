@@ -61,3 +61,15 @@ $("#filmListTable").jqGrid('setGridParam', {
 }).trigger('reloadGrid');
 //查询结束后全局变量查询条件置空（一个空json）
 g_SearrchCondition = JSON.parse('{}');
+```
+
+### Reload
+```js
+function pureReload()
+ {
+     $("#contractBaseinfo_YX").jqGrid('setGridParam', {
+         url: "/IntentionManage/ContractManage/GetAllzh?ContractType=" + contracttype,
+         mtype: 'POST',
+     }).trigger('reloadGrid');
+ }
+```

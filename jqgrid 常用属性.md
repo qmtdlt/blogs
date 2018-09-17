@@ -62,3 +62,31 @@ $("#filmListTable").jqGrid('setGridParam', {
 //查询结束后全局变量查询条件置空（一个空json）
 g_SearrchCondition = JSON.parse('{}');
 ``` 
+
+### 嵌入标签及设置字段默动态赋值
+```js
+//列嵌入标签
+{ name: '审核', index: 'audit', width: 100, sortable: false, "align": "center", formatter: editLink },
+
+function editLink(cellValue, options, rowdata, action) {
+     return "<a style=\"cursor:pointer;\" onclick=\"makeLinkAndClick('" + rowdata.F_Id + "')\">
+     <span class=\"linkSpan\">审核<span></a>";
+ }
+ //列设置指定文本内容
+ { name: '操作状态', index: 'isexamined', width: 100, sortable: false, "align": "center", formatter: GetExaminestatus }
+ function GetExaminestatus(cellValue, options, rowdata, action) {
+     var tmp;
+     //请求后台，动态赋值
+     $.ajax({
+         url: "/Zfbz/MainBusiness/IfExamined",
+         async: false,
+         data: {
+             mainBookF_Id: rowdata.F_Id
+         },
+         success: function (ifexamined) {
+             tmp = ifexamined;
+         }
+     });
+     return tmp;
+ }
+```

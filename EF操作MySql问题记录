@@ -1,0 +1,6 @@
+1. 前提条件：（1）安装MySql Connector Net(版本要求与nuget MySql.Data、MySql.Data.Entity版本保持一致)，（2）安装MySql For Visual Studio版本暂未
+发现问题（vs2019、MySql For Visual Studio 1.2.9，都是最新版本，安装目的是在vs新增数据ado.net向导可选 mysql database）。
+2. 项目nuget entityframework、MySql.Data、MySql.Data.Entity，注意MySql.Data、MySql.Data.Entity版本按照步骤1（tip:nuget选择较早版本的方法：右侧
+版本选项可下拉选择）.
+3. 重启vs，并且从小编译项目（如果不重新编译，可能提示“您的项目引用了最新实体框架；但是，找不到数据链接所需的与版本兼容的实体框架数”）。
+4 使用向导增加数据对象，方法同sqlserver。增删改查同理。

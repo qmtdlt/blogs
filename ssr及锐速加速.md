@@ -7,6 +7,9 @@ wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadow
 密码：12000asd
 端口：8856
 
+BBR加速
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+
 锐速加速器
 
 cetos 6 x64
